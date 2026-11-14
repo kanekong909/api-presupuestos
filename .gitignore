@@ -1,0 +1,4 @@
+config/config.php
+*.log
+herramientas/novelec_*.html
+para_subir/

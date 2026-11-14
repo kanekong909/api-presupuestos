@@ -1,0 +1,6 @@
+RewriteEngine On
+# Algunos servidores no pasan estas cabeceras a PHP
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteRule .* - [E=HTTP_X_API_CLAVE:%{HTTP:X-Api-Clave}]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
